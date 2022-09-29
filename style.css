@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap');
+
+*
+{
+    background: rgb(35, 35, 35);
+    color: #fff;
+    font-family: 'Abyssinica SIL', serif;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: #2c3333;
+    background: none;
+}
+
+.main
+{
+    display: flex;
+    justify-content: space-around;
+    width: 1000vh;
+}
+
+.main .field
+{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    border-radius: 30px;
+    cursor: pointer;
+    flex: 0.5;
+    -ms-flex: 1;
+    position: relative;
+    margin: 30px;
+    transition: flex 0.5s ease-in;
+    overflow: hidden;
+    transition: all ease 500ms;
+    object-fit: cover;
+    box-shadow: 0 0 15px 0 #2c33;
+}
+
+.main .field:hover
+{
+    transform: scale(1.03) ;
+    
+}
+
+h3
+{
+    font-size: 20px;
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    left: 20px;
+    bottom: 20px;
+    outline: 15px;
+    background: none;
+}
+
+.main .field.active
+{
+    flex: 5;
+}
+
+.main .field.active h3
+{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.7s;
+}
+
+@media (max-width: 480px) {
+    .main {
+      width: 100vw;
+    }
+    .field:nth-of-type(4),
+    .field:nth-of-type(5) {
+      display: none;
+    }
+  }
+
+
